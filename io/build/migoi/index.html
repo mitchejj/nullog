@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang=en-US>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+  <meta content=nullog property=og:site_name>
+  <meta content="" property=og:updated_time>
+  <meta content=en_US property=og:locale>
+  <meta content=article property=og:type>
+  <meta content="" property=og:description>
+  <meta content="migoi (yeti)" property=og:title>
+  <meta content="" property=og:image>
+  <meta content="" property=og:url>
+  <meta content="Jason Mitchell" property=article:author>
+  <meta content="" property=article:section>
+  <meta content="" property=article:published_time>
+  <meta content="" property=article:modified_time>
+  <meta content=summary name=twitter:card>
+  <meta content=@_nullog name=twitter:site>
+  <meta content=@mitchejj name=twitter:creator>
+  <meta content=nullog property=article:author>
+  <meta content=@_nullog name=twitter:creator>
+  <link href=//humans.txt rel=author type=text/plain>
+  <title>migoi (yeti) | nullog</title>
+  <link href=/io/build/migoi/ rel=canonical>
+  <link href=/nullog.css rel=stylesheet>
+
+  <body class=nullog>
+    <header class="center site-header">
+      <h1 class="lowercase center site-title"><a href=/ >nullog</a></h1>
+      <nav class="lowercase site-nav">
+        <ul>
+          <li class=nav-node>
+            <h2 class=small><a href=/about/ >about</a></h2>
+            <li class=nav-node>
+              <h2 class=small><a href=/explore/ >explore</a></h2>
+              <li class=nav-node>
+                <h2 class=small><a href=/io/ >io</a></h2></ul>
+      </nav>
+    </header>
+    <main class=nullog-body>
+      <article class=page>
+        <header class=title>
+          <h2 class=lowercase>migoi (yeti)<span class=mute> node/javascript discovery via the creation of a static site generator.</span></h2></header>
+        <p><strong>I placed this under my “sketch pad” for a reason. I doubt I will actually create the build system I have in mind.</strong>
+          <p>Ever since I picked up my RaspberryPi early 2015 I’ve been toying around with the idea of patching together tool to replace Middleman build/generate this site. As I think about this little project the ambitions of the project grow I need to
+            create a roadmap to help stay focused.
+            <p>The first set of requirement are fairly simple for such a build tool/system.
+              <ul>
+                <li>ES6 (promises over callbacks) might <a href=https://github.com/tj/co>co</a> be useful?
+                  <li>Data/content portability with Jeykll &amp; Middleman
+                    <li>Use a task/build tool
+                      <ul>
+                        <li>broccoli
+                          <ul>
+                            <li>— to build the html &amp; css</ul>
+                          <li>gulp
+                            <ul>
+                              <li>— manage the deploy
+                                <li>— git commits/taging</ul>
+                            <li>fly — seems interesting but is it useful?</ul>
+                      <li>CSS — move away from SASS
+                        <ul>
+                          <li><a href=https://codegeekz.com/best-css-tools-for-2015/>Best CSS Tools for 2015</a>
+                            <ul>
+                              <li>— uncss, cssnano, cssnext, postcss, myth.io</ul>
+                            <li><a href=https://goalsmashers.github.io/css-minification-benchmark/>minification-benchmark</a>
+                              <li><a href=https://blot.im/typeset/>Type­set.js</a>?</ul>
+                        <li>Templates
+                          <ul>
+                            <li>nunjucks
+                              <ul>
+                                <li><a href=http://jlongster.com/A-Deep-Dive-into-Asynchronous-Templating>A Deep Dive into Asynchronous Templating</a></ul>
+                          </ul>
+              </ul>
+              <p>So while the goals seem simple, something like what I want already exist in a few forms. The best way for me to move forward is to either use one of these “stock” tools or create smaller gulp/broccoli task to kick start the process.</article>
+    </main>
+    <footer>
+      <div class="small center">
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...<br><em>Copyright &copy; 2012 &mdash; 2016; <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a></em></div>
+    </footer>

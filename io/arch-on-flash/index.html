@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang=en-US>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+  <meta content=nullog property=og:site_name>
+  <meta content="" property=og:updated_time>
+  <meta content=en_US property=og:locale>
+  <meta content=article property=og:type>
+  <meta content="" property=og:description>
+  <meta content="vacation[summer, 2013]" property=og:title>
+  <meta content="" property=og:image>
+  <meta content="" property=og:url>
+  <meta content="Jason Mitchell" property=article:author>
+  <meta content="" property=article:section>
+  <meta content="" property=article:published_time>
+  <meta content="" property=article:modified_time>
+  <meta content=summary name=twitter:card>
+  <meta content=@_nullog name=twitter:site>
+  <meta content=@mitchejj name=twitter:creator>
+  <meta content=nullog property=article:author>
+  <meta content=@_nullog name=twitter:creator>
+  <link href=//humans.txt rel=author type=text/plain>
+  <title>vacation[summer, 2013] | nullog</title>
+  <link href=/io/arch-on-flash/ rel=canonical>
+  <link href=/nullog.css rel=stylesheet>
+
+  <body class=nullog>
+    <header class="center site-header">
+      <h1 class="lowercase center site-title"><a href=/ >nullog</a></h1>
+      <nav class="lowercase site-nav">
+        <ul>
+          <li class=nav-node>
+            <h2 class=small><a href=/about/ >about</a></h2>
+            <li class=nav-node>
+              <h2 class=small><a href=/explore/ >explore</a></h2>
+              <li class=nav-node>
+                <h2 class=small><a href=/io/ >io</a></h2></ul>
+      </nav>
+    </header>
+    <main class=nullog-body>
+      <article class=page>
+        <header class=title>
+          <h2 class=lowercase>vacation[summer, 2013]<span class=mute> Arch Linux on USB Flash</span></h2></header>
+        <p>The first step is to download the official ISO, well maybe. I’ve never been able to make any of my MacBook’s to boot the EFISTUB. Maybe adding the boot options <code>noapic</code>, <code>noapic</code>, <code>nomodeset</code> In fact I haven’t
+          been able to make a VM boot an EFISTUB yet. Before writeing this little post I was never able to get any version of Linux to boot off a flash drive on my MacBook (2,1)<pre><code>    ### Are Comments
+# run this as root or sudo
+</code></pre>
+          <p>I will opt install a small system on a flash drive and use that as my installer, this will have other benefits including using it portable system and rescue drive and most importantly and learning device. Using my current Arch install I just
+            need to install arch-install-scripts.
+            <h3 id=prep-the-usb-flash-drive>Prep the USB Flash Drive</h3>
+            <p>I used gparted (yes, I am using Arch and GUI tools for this) to created a GPT along with two partitions. It is my personal preference to make my EFI drive my first partition so <code>/dev/sdc1</code> is 512MB fat32[^fat32] partion wwhich will
+              be placed at /boot. Oh, apparently fat32 file systems shouldn’t be less than 512MB, you could make it smaller but I really didn’t see a reason to, I think I also should I have set the boot flag. The second drive partition will be for everything,
+              I chose to make <code>/dev/sdc2</code> a 1GB ext4 partition for /. I know ext4 and a 1GB partition is beyond overkill for this particular application, just go with it for now, and use <code>lsblk -f</code> to ensure the right drive is being
+              used.
+              <p>It is important to mount everything in the proper order and location for this application / followed by boot:<pre><code># mkdir -p mnt
+# mount /dev/sdc2 /mnt
+# mkdir -p mnt/boot
+# mount /dev/sdc1 /mnt/boot
+</code></pre>
+                <h3 id=install>Install</h3>
+                <p>I know I want, need a few tools installed (I have systems with both 32 &amp; 64 bit efi’s thus I need booth versions of grub):<pre><code># pacstrap  -i /mnt base zsh
+</code></pre>
+                  <p>Here on out I follow the basic install guide<pre><code>    ### check it of course, compare UUID with `blkid`
+# genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+
+    ### make my life a bit better
+# arch-chroot /mnt /bin/zsh
+# chsh /bin/zsh
+
+# pacman -S arch-install-scripts dosfstools mtools gptfdisk openssh rng-tools avahi nss-mdns wpa_supplicant wpa_actiond wireless_tools dialog grub-efi-x86_64 grub-efi-i386 refind-efi
+
+# ln -s /usr/share/zoneinfo/America/Boston /etc/localtime
+# echo archFlash &gt; /etc/hostname
+
+    ### comment out my location
+# nano /etc/locale.gen
+# locale-gen &amp;&amp; hwclock --systohc --utc
+
+    ## Only make protocol 2 keys
+# rngd -f -r /dev/urandom
+# ssh-keygen -t ecdsa -b 521 -f  /etc/ssh/ssh_host_ecdsa_key -N &#39;&#39;
+# ssh-keygen -t rsa -b 15360 -f /etc/ssh/ssh_host_rsa_key -N &#39;&#39;
+</code></pre>
+                    <p>Yes, a 15360-bit rsa key is a bit insane, a 3072-bit or even 2048-bit key would have been more than sufficient.
+                      <p>The wiki page <a href=https://wiki.archlinux.org/index.php/Usb_install>Install Arch on a USB Key</a> told me to me to edit hook array in <code>/etc/mkinitcpio.conf</code> and move ‘block’ right after ‘udev’, I couldn’t see the harm
+                        in following wise advise.<pre><code>    ### rebuilding my RAM disk
+# mkinitcpio -p linux
+</code></pre>
+                        <p>Now the fun part, getting it all to boot. This where I also run into many problems. I’m not using <code>efibootmgr</code> as I have a Mac, leaving me to use mactel-boot. However, with mactel-boot /boot must be an HFS+ partition
+                          in order to do that I must install <code>hfsprogs</code> and <code>mactel-boot</code> from the AUR. I choose not to do that. The complexity of my install is increased, yet it seems ‘pure’. A quick work around would be (but you
+                          can’t run this as the root user &amp; you would also need to install base-devel):<pre><code># bash &lt;(curl aur.sh) -si hfsprogs
+# bash &lt;(curl aur.sh) -si mactel-boot
+</code></pre>
+                          <p>I want to use refind, a I can easily drop into the EFI shell if the need exist, this would/should also work for Gummiboot to I suppose. I also like to use GRUB2 to keep it ‘simple’… go figure I said simple grub2 in the same sentence…
+                            maybe this isn’t so pure.
+                            <h3 id=crafting-a-macbook-2-1-4-1-solution>Crafting a MacBook (2,1) &amp; (4,1) solution</h3>
+                            <p>First move refind in place [^refindUpdate]:<pre><code># cp /usr/lib/refind_x64.efi /boot/EFI/boot/bootx64.efi
+# cp /usr/lib/refind_ia32.efi /boot/EFI/boot/bootia32.efi
+# cp /usr/share/refind/icons /boot/EFI/boot/icons
+# cp /usr/share/refind/fonts /boot/EFI/boot/fonts
+# touch /boot/EFI/boot/refind.conf
+</code></pre>
+                              <p>Populate refind.conf with the following gist {% gist 5648196 %}
+                                <p>Next, grub, this will throw out four fatal warnings/errors, yet it works.<pre><code># grub-install --efi-directory=/boot/ --bootloader-id=arch_grub --target=x86_64-efi --recheck
+# grub-install --efi-directory=/boot/ --bootloader-id=arch_grub --target=i386-efi --recheck
+# cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+# grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+                                  <p>MAYBE: The EFI secret source sauce is to <code>add_efi_memmap</code> to the boot options otherwise your booting (I think, in legacy mode, BIOS compatible mode). edit <code>/etc/default/grub</code> and find the line ‘GRUB_CMDLINE_LINUX’
+                                    and add the sauce. Also to see if you booted via EFI try <code>[ -d /sys/firmware/efi ] &amp;&amp; echo &quot;EFI boot on HDD&quot; || echo &quot;Legacy boot on HDD&quot;</code>.
+                                    <p>Setting up mDNS (see previous posting on avahi)<pre><code># sync
+# exit
+</code></pre>
+                                      <p>I want/need network access, since these installs will take place at home, using my current network, I will just copy over my current profiles from <code>/etc/netctl/</code>, once booted into the flash drive I could
+                                        run <code>iwconfig</code> find the device name for my wls and enp. UPDATE: I need to install b43-firmware from the AUR in order for my Wi-Fi to work on the (4,1) system.<pre><code># sync
+# umount /mnt/boot
+# umount /mnt
+</code></pre>
+                                        <p>Boot the drive to ensure your able to boot the system &amp; enable a few services, I can easily install Arch on my other systems via ssh.<pre><code>    ### I had to enable root access for install
+# systemctl enable sshd.service
+# systemctl enable avahi-daemon.service
+</code></pre>
+                                          <p>Just a few layout notes for my other systems
+                                            <h3 id=use-gpt>Use GPT</h3>
+                                            <p>Have a 1MB buffer between partitions (including the first entry and last)
+                                              <ul>
+                                                <li>
+                                                  <p><strong>/dev/sda1/</strong>
+                                                    <ul>
+                                                      <li>Will be mounted at /boot
+                                                        <li>Needs to be either FAT32 (ideal) or HFS+
+                                                          <ul>
+                                                            <li>Maybe make another partition and mount at /boot/EFI (hfs+)</ul>
+                                                          <li>Make at least 512MB</ul>
+                                                    <li>
+                                                      <p><strong>/dev/sda2/</strong>
+                                                        <ul>
+                                                          <li>Will be mounted as /
+                                                            <li>Should be ext4, could be ext3
+                                                              <li>Should be about 35% of the drive, room to grow</ul>
+                                                        <li><strong>/dev/sda3/</strong>
+                                                          <ul>
+                                                            <li>Will be mounted as /home
+                                                              <li>Must be ext4, to keep data safe</ul>
+                                                          <li><strong>Swap</strong>
+                                                            <ul>
+                                                              <li>First use the local HD reduce RAM constraints (think of this a small cache)
+                                                                <ul>
+                                                                  <li>fallocate -l 256MB /swapfile
+                                                                    <li>chmod 600 /swapfile
+                                                                      <li>mkswap /swapfile
+                                                                        <li>swapon -p 20 /swapfile
+                                                                          <li>edit <code>/etc/sysctl.conf</code> and change swappiness to 50
+                                                                            <li>edit fstab find the swapfile entry and edit the options to defaults,pri=50</ul>
+                                                                <li>I will just make use of a swap file, lets try to make the FS as <a href=http://fenidik.blogspot.com/2010/03/ext4-di-sable-journal.html>fast as possible for this</a> (more to come)
+                                                                  <ul>
+                                                                    <li>should I mount in /var/tmp/swap</ul>
+                                                                  <li>mke2fs -t ext4 -m 1.0
+                                                                    <ul>
+                                                                      <li>I’ve read using <code>-O ^has_journal</code> will disable journal at creation skipping a few steps below</ul>
+                                                                    <li>tune2fs -o journal_data_writeback
+                                                                      <li>tune2fs -O ^has_journal
+                                                                        <li>look into barrier=0,nobhng
+                                                                          <ul>
+                                                                            <li>does using errors=remount-ro make sense?</ul>
+                                                                          <li>mkdir -P /var/unstable
+                                                                            <li>mount /dev/sdXY /var/unstable {: .blank-bullet}</ul>
+                                              </ul>
+                                              <p><strong>Notes:</strong> this install also works just fine on a MacBookPro(9,2)
+                                                <p><strong>Update:</strong> I suffered some drive issue with the flash drive. pacman became croupt (the binaries where zeroed out) and the /boot partition was destroyed. I was able to reinstall pacman by downloading
+                                                  the source: [^pacmanNote]<pre><code># curl -O ftp://ftp.archlinux.org/other/pacman/pacman-4.1.2.tar.gz
+# tar -x pacman.tar.gz
+# cd pacman
+# configure ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+# make
+# make install
+# pacman -S $(pacman -Qnq)
+</code></pre>
+                                                  <p>[^fat32]: <code>sudo mkfs.vfat -c -F32 /dev/sdc1 -n flashBoot -v</code> [^refindUpdate]: Everything moved to /usr/share/refind/ need to update this section. [^pacmanNote]: The last command reinstalls ‘all’
+                                                    packages… While it may not be needed, I just found I ran into a few issues where other libs where also croupted. If flash drive was supposed to be used for anything other than play/test and installer
+                                                    I would have wiped the drive and started fresh.</article>
+    </main>
+    <footer>
+      <div class="small center">
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...<br><em>Copyright &copy; 2012 &mdash; 2016; <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a></em></div>
+    </footer>

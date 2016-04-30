@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=en-US>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+  <meta content=nullog property=og:site_name>
+  <meta content="" property=og:updated_time>
+  <meta content=en_US property=og:locale>
+  <meta content=article property=og:type>
+  <meta content="" property=og:description>
+  <meta content="falsity of sure things" property=og:title>
+  <meta content="" property=og:image>
+  <meta content="" property=og:url>
+  <meta content="Jason Mitchell" property=article:author>
+  <meta content="" property=article:section>
+  <meta content=2013-07-07T00:00:00.000Z property=article:published_time>
+  <meta content="" property=article:modified_time>
+  <meta content=summary name=twitter:card>
+  <meta content=@_nullog name=twitter:site>
+  <meta content=@mitchejj name=twitter:creator>
+  <meta content=nullog property=article:author>
+  <meta content=@_nullog name=twitter:creator>
+  <link href=//humans.txt rel=author type=text/plain>
+  <title>falsity of sure things | nullog</title>
+  <link href=/2013/06/07/openbox-cinnamon/ rel=canonical>
+  <link href=/nullog.css rel=stylesheet>
+
+  <body class=nullog>
+    <header class="center site-header">
+      <h1 class="lowercase center site-title"><a href=/ >nullog</a></h1>
+      <nav class="lowercase site-nav">
+        <ul>
+          <li class=nav-node>
+            <h2 class=small><a href=/about/ >about</a></h2>
+            <li class=nav-node>
+              <h2 class=small><a href=/explore/ >explore</a></h2>
+              <li class=nav-node>
+                <h2 class=small><a href=/io/ >io</a></h2></ul>
+      </nav>
+    </header>
+    <main class=nullog-body>
+      <article class="post archlinux">
+        <header class=title>
+          <h2 class=lowercase>falsity of sure things<span class=mute> natural scrolling with cinnamon</span></h2></header>
+        <p>My <a href=../pages/arch-on-flash>vacation[summer, 2013]</a> ended and I continue to evaluate and tinker with plans to create a standardized deployment across my laptops; I am finding what I once thought was a sure thing isn’t. I currently run
+          <a href=http://openbox.org/>OpenBox</a> on my Arch install, my desire to keep minimal system along how much I enjoy many aspects of <a href=http://crunchbang.org>Crunch Bang</a> I thought OpenBox would be the clear winner. Yet <a href=http://cinnamon.linuxmint.com/>Cinnamon</a>
+          is starting to emerge as a strong contender, I am starting to grow fond of the environment. I wish Cinnamon was an independant <a href=https://github.com/linuxmint/cinnamon title="Cinnamon Git Hub Project">project</a> and not a vital cog of
+          Mint Linux. Without such seperation, lack of documantion and independant development cycle the project lacks transparency leaving the UX at the whim of the Mint dev team.
+          <blockquote>
+            <p>Cinnamon is a Mint project and it’s the implementation of Mint’s vision and needs for a desktop.<sup id=#fn1r-2013-06-07><a href=#fn1-2013-06-07>1</a></sup> <small><cite><a href=https://github.com/linuxmint/Cinnamon/issues/1828#issuecomment-16286688 title="Creator of Mint">Clement Lefebvre</a></cite></small></blockquote>
+          <p>Electing to use Cinnamon would be taking the easy way out along with the baggage associated with it. Cinnamon is a derivative of GNOME, which has a plethora of settings not always exposed to the user. One such setting is natural scrolling, I
+            have natural scrolling correctly configure in xorg.conf{.d}<pre><code>Section &quot;InputClass&quot;
+   ...
+   Option   &quot;VertScrollDelta&quot;     &quot;-111&quot;
+   Option   &quot;HorizScrollDelta&quot;    &quot;-111&quot;
+   ...
+EndSection
+</code></pre>
+            <p>Neither GNOME nor Cinnamon would honor this system wide defualt setting, so some tweaking in in order. I could use <code>dconf-editor</code> to follow the bread crumbs along the schema path below to alter the key value. A much simpler and
+              dare I say elegant solution exist:<pre><code>gsettings set org.gnome.settings-daemon.peripherals.touchpad natural-scroll &quot;true&quot;
+</code></pre>
+              <div class=footnotes>
+                <ol>
+                  <li id=fn1-2013-06-07>
+                    <blockquote>It’s in its design to be compatible with Linux as a whole though, so for it not work or not to be suitable on any distribution is a perfectly valid concern and we do consider it a bug.</blockquote>
+                    <p>It is perfectly acceptable for Mint to spend their resources on improving Cinnamon for Mint. Speaking only as an end user not using a Mint distro, if I elect to use Cinnamon I would personally feel more comfortable with my choice if
+                      development priority was given to improve the project overall and not specifically Mint. <a href=#fn1r-2013-06-07>&#x21A9;&#xFE0E;</a></ol>
+              </div>
+      </article>
+    </main>
+    <footer>
+      <div class="small center">
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...<br><em>Copyright &copy; 2012 &mdash; 2016; <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a></em></div>
+    </footer>

@@ -1,0 +1,17 @@
+# humanstxt.org/
+
+/* AUTHOR, DESIGNER, & HANDYMAN */
+      The Proprietor:Jason Mitchell
+      Twitter: @mitchejj
+      Location: Michigan
+
+/* SITE */
+      Generated: 2016-04-29T23:57:33.735Z
+      Language: English
+      Doctype: HTML5
+      Tools: Gulp, Metalsmith & postcss
+      IDE: Atom & Visiual Studio Code
+
+/* NODE */
+      Version: 6.0.0
+      Platform: x64-linux

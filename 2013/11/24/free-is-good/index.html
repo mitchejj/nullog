@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en-US>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+  <meta content=nullog property=og:site_name>
+  <meta content="" property=og:updated_time>
+  <meta content=en_US property=og:locale>
+  <meta content=article property=og:type>
+  <meta content="" property=og:description>
+  <meta content="Free Is Good" property=og:title>
+  <meta content="" property=og:image>
+  <meta content="" property=og:url>
+  <meta content="Jason Mitchell" property=article:author>
+  <meta content="" property=article:section>
+  <meta content=2013-12-24T00:00:00.000Z property=article:published_time>
+  <meta content="" property=article:modified_time>
+  <meta content=summary name=twitter:card>
+  <meta content=@_nullog name=twitter:site>
+  <meta content=@mitchejj name=twitter:creator>
+  <meta content=nullog property=article:author>
+  <meta content=@_nullog name=twitter:creator>
+  <link href=//humans.txt rel=author type=text/plain>
+  <title>Free Is Good | nullog</title>
+  <link href=/2013/11/24/free-is-good/ rel=canonical>
+  <link href=/nullog.css rel=stylesheet>
+
+  <body class=nullog>
+    <header class="center site-header">
+      <h1 class="lowercase center site-title"><a href=/ >nullog</a></h1>
+      <nav class="lowercase site-nav">
+        <ul>
+          <li class=nav-node>
+            <h2 class=small><a href=/about/ >about</a></h2>
+            <li class=nav-node>
+              <h2 class=small><a href=/explore/ >explore</a></h2>
+              <li class=nav-node>
+                <h2 class=small><a href=/io/ >io</a></h2></ul>
+      </nav>
+    </header>
+    <main class=nullog-body>
+      <article class=post>
+        <header class=title>
+          <h2 class=lowercase>Free Is Good<span class=mute> Greed is good</span></h2></header>
+        <p>I was able to to bring my Digital Ocean ‘cloud’ up without to much trouble. I was able to bring up an ngix server, server up encrypted content all while keeping the all three version of the site in sync with the git repo.
+          <p>The hardest part was the how, what is the best way to keep the Digital Ocean version of the site up-to-date with the git repo. After some searching I stumbled across <a href=http://developmentseed.org/blog/2013/05/01/introducing-jekyll-hook/>jekyll-hook</a>,
+            by the same creators of Prose. Now it wasn’t to difficult to configure and deploy. I only ran into to issues, and only one of them took time to figure out. What is the best method to keep a node app running and how do you do that on a systemd
+            server. The first part of the problem ended up being fairly simple, and use <a href=http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever>forever</a>. However, I’ve never crafted a systemd service file before, and I had no idea where
+            to start. In the end the solution was really simple. I just needed one to create a <a href=https://gist.github.com/mitchejj/7631695>jekyll-hook.service</a> file and install at <code>/etc/systemd/system/jekyll-hook.service</code>. I also use
+            RVM to install ruby and gemset, so I also jekyll-hook build script (build-v1.sh), knows about RVM by properly sourcing it.
+            <p>While I enjoyed all of this, and love the idea hosting the site via https, I think I will be pulling down the sails and keep the site docked with heroku. When it comes down to it the price, free, is hard to beat. None of the basic requirements
+              have changed, I have a working stack which suits my needs… for now. However, now is the time to oil the gears and clear the cruft it is time to refactor the stack.
+              <p>I order to make the move really worth while I need to generate a spec sheet that would encompass more services that I currently rely on. In spirit, now is the time to oil the gears and clear the cruft it is time to refactor the stack.</article>
+    </main>
+    <footer>
+      <div class="small center">
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...<br><em>Copyright &copy; 2012 &mdash; 2016; <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a></em></div>
+    </footer>
