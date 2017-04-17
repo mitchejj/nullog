@@ -3,45 +3,53 @@
   <meta content="width=device-width,initial-scale=1" name=viewport>
   <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
   <meta content=nullog property=og:site_name>
-  <meta content="" property=og:updated_time>
+  <meta content=2016-04-29T15:56:09.000Z property=og:updated_time>
   <meta content=en_US property=og:locale>
   <meta content=article property=og:type>
-  <meta content="" property=og:description>
   <meta content=heroku property=og:title>
-  <meta content="" property=og:image>
-  <meta content="" property=og:url>
+  <meta content=https://nullog.net/2012/08/09/heroku/ property=og:url>
   <meta content="Jason Mitchell" property=article:author>
-  <meta content="" property=article:section>
+  <meta content=herokujekyllmeta property=article:tag>
   <meta content=2012-09-09T00:00:00.000Z property=article:published_time>
-  <meta content="" property=article:modified_time>
+  <meta content=2016-04-29T15:56:09.000Z property=article:modified_time>
   <meta content=summary name=twitter:card>
   <meta content=@_nullog name=twitter:site>
   <meta content=@mitchejj name=twitter:creator>
-  <meta content=nullog property=article:author>
-  <meta content=@_nullog name=twitter:creator>
   <link href=//humans.txt rel=author type=text/plain>
   <title>heroku | nullog</title>
-  <link href=/2012/08/09/heroku/ rel=canonical>
+  <link href=https://nullog.net//2012/08/09/heroku/ rel=canonical>
   <link href=/nullog.css rel=stylesheet>
-
   <body class=nullog>
     <header class="center site-header">
-      <h1 class="lowercase center site-title"><a href=/ >nullog</a></h1>
+      <h1 class="center lowercase site-title">
+        <a href=/>nullog</a>
+      </h1>
       <nav class="lowercase site-nav">
         <ul>
           <li class=nav-node>
-            <h2 class=small><a href=/about/ >about</a></h2>
+            <h2 class=small>
+              <a href=/about/>about</a>
+            </h2>
             <li class=nav-node>
-              <h2 class=small><a href=/explore/ >explore</a></h2>
+              <h2 class=small>
+                <a href=/all/>explore</a>
+              </h2>
               <li class=nav-node>
-                <h2 class=small><a href=/io/ >io</a></h2></ul>
+                <h2 class=small>
+                  <a href=/io/>io</a>
+                </h2>
+        </ul>
       </nav>
     </header>
     <main class=nullog-body>
       <article class="post herokujekyllmeta">
         <header class=title>
-          <h2 class=lowercase>heroku<span class=mute> less than beta quality</span></h2></header>
-        <p>After playing with jekyll on Git Hub’s pages, I realized I needed something with a bit more zest. I needed plug-in support. I found Jonas Forsberg post entitled <a href=http://jonasforsberg.se/2012/07/22/jekyll-heroku-unicorn>Jekyll + Heroku + Unicorn = Blazing fast blogging</a>          and basically followed the step outlined below.<pre><code>sudo gem install heroku
+          <h2 class=lowercase>heroku
+            <span class=mute> less than beta quality</span>
+          </h2>
+        </header>
+        <p>After playing with jekyll on Git Hub’s pages, I realized I needed something with a bit more zest. I needed plug-in support. I found Jonas Forsberg post entitled
+          <a href=http://jonasforsberg.se/2012/07/22/jekyll-heroku-unicorn>Jekyll + Heroku + Unicorn = Blazing fast blogging</a> and basically followed the step outlined below.<pre><code>sudo gem install heroku
 sudo gem install bundler
 heroku auth:login
 git clone git@github.com:himynameisjonas/jekyll-heroku-unicorn.git
@@ -61,8 +69,9 @@ You have deleted from the Gemfile:
 You have changed in the Gemfile:
 * rack-jekyll from `https://github.com/adaoraul/ra... (at master)` to `no specified source`
 </code></pre>
-            <p>Time to regroup, I searched around and found a nice how-to guide, <a href=http://www.thomas.stachl.me/blog/2012/05/26/jekyll-on-heroku.html>Jekyll on Heroku</a> by Thomas Stachl. It seem straight forward, yet it to failed. I looked around
-              some more, and found <a href=http://www.mikemayo.org/2012/deploying-jekyll-sites-to-heroku-with-rack-jekyll>Deploying Jekyll sites to Heroku with Rack-Jekyll</a> which gave two little snippets of code.<pre><code>gem &#39;rack-jekyll&#39;, :git =&gt; &#39;https://github.com/adaoraul/rack-jekyll.git&#39;, :require =&gt; &#39;rack/jekyll&#39;
+            <p>Time to regroup, I searched around and found a nice how-to guide,
+              <a href=http://www.thomas.stachl.me/blog/2012/05/26/jekyll-on-heroku.html>Jekyll on Heroku</a> by Thomas Stachl. It seem straight forward, yet it to failed. I looked around some more, and found
+              <a href=http://www.mikemayo.org/2012/deploying-jekyll-sites-to-heroku-with-rack-jekyll>Deploying Jekyll sites to Heroku with Rack-Jekyll</a> which gave two little snippets of code.<pre><code>gem &#39;rack-jekyll&#39;, :git =&gt; &#39;https://github.com/adaoraul/rack-jekyll.git&#39;, :require =&gt; &#39;rack/jekyll&#39;
 </code></pre>
               <p>and<pre><code>require &#39;bundler&#39;
 Bundler.require(:default, :production)
@@ -110,5 +119,10 @@ gem install heroku
     </main>
     <footer>
       <div class="small center">
-        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...<br><em>Copyright &copy; 2012 &mdash; 2016; <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a></em></div>
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...
+          <br>
+          <em>Copyright &copy; 2012 &mdash; 2017;
+            <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a>
+          </em>
+      </div>
     </footer>

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url> <loc>https://nullog.net/404/</loc> <lastmod>2016-02-29</lastmod> </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://nullog.net/about/</loc> </url>
-<url> <loc>https://nullog.net/all/</loc> </url>
 <url> <loc>https://nullog.net/io/</loc> </url>
 <url> <loc>https://nullog.net/</loc> </url>
 <url> <loc>https://nullog.net/suggest/</loc> </url>
@@ -20,39 +18,39 @@
 <url> <loc>https://nullog.net/2012/08/26/github-to-heroku-deplyment/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/08/26/quick-and-dirty-metrics/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/04/giving-back/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2012/09/11/iphone-x/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/12/running-check-list/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2012/09/11/iphone-x/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2012/09/17/fitbit-the-zip/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/15/iphone5-blueprints/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/15/the-ultimate-runners-guide/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2012/09/17/fitbit-the-zip/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/17/interval-training/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/17/run-mate/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/09/19/this-cant-be-good/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2012/09/21/wallpaper/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/10/04/the-other-social/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2012/09/21/wallpaper/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2012/11/23/linux-playground/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/03/16/an-update/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/03/16/an-update/</loc> <lastmod>2016-05-01</lastmod> </url>
 <url> <loc>https://nullog.net/2013/03/18/imap-backup/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/03/20/the-2012/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/03/21/apollo/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/03/23/dopey-challenge/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/03/24/spring-fresh/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/03/27/weather/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/03/27/why-turbotax-hates-you/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/04/08/dopey-register/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/04/16/way-of-the-arch/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/03/27/weather/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/05/14/gpgme-error/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/04/16/way-of-the-arch/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/05/23/avahi/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/05/23/google-sync-server/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/05/25/summer-vacation-project/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/05/26/arch-sight/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/06/06/rss-again/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/06/06/sketcher-running-shoes/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/05/26/arch-sight/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/06/07/openbox-cinnamon/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/06/23/dyk-running-shoes/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/07/13/squat/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/07/31/run-walk/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/07/20/rss-again/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/07/31/run-walk/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/08/06/shorts/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/08/20/theory/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/08/29/davinci/</loc> <lastmod>2016-04-29</lastmod> </url>
@@ -63,36 +61,36 @@
 <url> <loc>https://nullog.net/2013/09/11/quora/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/09/12/wake-up-call/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/10/29/which-wing/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/11/11/smart/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/11/04/the-10/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/11/11/smart/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/11/17/quantitative-self/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/11/21/setting-sail/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/11/24/free-is-good/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2013/11/29/starting-the-refactor/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/11/21/setting-sail/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/12/07/refactor-the-stall/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2013/11/29/starting-the-refactor/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2013/12/27/5-plus-hours/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/01/01/twenty-fourteen/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2014/01/19/dopey-challenge/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/01/27/openshift/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2014/03/27/simple/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2014/01/19/dopey-challenge/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/02/18/interesting-reads/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2014/03/27/simple/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/03/27/the-full-sass-move/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/03/30/nullog/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/04/02/running-2014/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/05/19/macbook-pro/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2014/05/31/may-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/06/30/june-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/07/14/middleman/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2014/07/31/july-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2014/05/31/may-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/08/31/august-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/09/30/september-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2014/07/31/july-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2014/11/30/november-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/10/31/october-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/12/19/server-underpinnings/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2014/11/30/november-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2014/12/31/december-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2015/01/24/running-ahead-in-2015/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/01/31/january-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/02/28/february-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2015/01/24/running-ahead-in-2015/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/03/15/raspberry/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/03/31/march-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/04/06/surge-dot-sh/</loc> <lastmod>2016-04-29</lastmod> </url>
@@ -104,20 +102,24 @@
 <url> <loc>https://nullog.net/2015/08/31/august-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/09/30/september-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/10/31/october-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
-<url> <loc>https://nullog.net/2015/11/30/november-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2015/12/31/december-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2016/01/31/january-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2015/11/30/november-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2016/02/29/february-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
 <url> <loc>https://nullog.net/2016/03/31/march-bits/</loc> <lastmod>2016-04-29</lastmod> </url>
+<url> <loc>https://nullog.net/2016/04/30/april-bits/</loc> <lastmod>2016-05-07</lastmod> </url>
+<url> <loc>https://nullog.net/2016/05/31/may-bits/</loc> <lastmod>2016-07-31</lastmod> </url>
+<url> <loc>https://nullog.net/2016/06/30/june-bits/</loc> <lastmod>2016-06-30</lastmod> </url>
+<url> <loc>https://nullog.net/2016/07/31/july-bits/</loc> <lastmod>2016-07-31</lastmod> </url>
 <url> <loc>https://nullog.net/io/arch-on-flash/</loc> </url>
 <url> <loc>https://nullog.net/io/arch/</loc> </url>
 <url> <loc>https://nullog.net/io/pi/</loc> </url>
 <url> <loc>https://nullog.net/io/thanks/</loc> </url>
 <url> <loc>https://nullog.net/io/todo/</loc> </url>
 <url> <loc>https://nullog.net/io/build/migoi/</loc> </url>
-<url> <loc>https://nullog.net/io/javascript/</loc> </url>
 <url> <loc>https://nullog.net/io/pi/misc-notes/</loc> </url>
 <url> <loc>https://nullog.net/io/pi/rasp-arch-install/</loc> </url>
 <url> <loc>https://nullog.net/io/pi/rasp-arch-next/</loc> </url>
 <url> <loc>https://nullog.net/io/pi/systemd/</loc> </url>
+<url> <loc>https://nullog.net/io/javascript/</loc> </url>
 </urlset>

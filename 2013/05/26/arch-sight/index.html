@@ -3,65 +3,89 @@
   <meta content="width=device-width,initial-scale=1" name=viewport>
   <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
   <meta content=nullog property=og:site_name>
-  <meta content="" property=og:updated_time>
+  <meta content=2016-04-29T15:56:09.000Z property=og:updated_time>
   <meta content=en_US property=og:locale>
   <meta content=article property=og:type>
-  <meta content="" property=og:description>
   <meta content="iSight in Arch" property=og:title>
-  <meta content="" property=og:image>
-  <meta content="" property=og:url>
+  <meta content=https://nullog.net/2013/05/26/arch-sight/ property=og:url>
   <meta content="Jason Mitchell" property=article:author>
-  <meta content="" property=article:section>
+  <meta content=archlinuxmacbook property=article:tag>
   <meta content=2013-06-26T00:00:00.000Z property=article:published_time>
-  <meta content="" property=article:modified_time>
+  <meta content=2016-04-29T15:56:09.000Z property=article:modified_time>
   <meta content=summary name=twitter:card>
   <meta content=@_nullog name=twitter:site>
   <meta content=@mitchejj name=twitter:creator>
-  <meta content=nullog property=article:author>
-  <meta content=@_nullog name=twitter:creator>
   <link href=//humans.txt rel=author type=text/plain>
   <title>iSight in Arch | nullog</title>
-  <link href=/2013/05/26/arch-sight/ rel=canonical>
+  <link href=https://nullog.net//2013/05/26/arch-sight/ rel=canonical>
   <link href=/nullog.css rel=stylesheet>
-
   <body class=nullog>
     <header class="center site-header">
-      <h1 class="lowercase center site-title"><a href=/ >nullog</a></h1>
+      <h1 class="center lowercase site-title">
+        <a href=/>nullog</a>
+      </h1>
       <nav class="lowercase site-nav">
         <ul>
           <li class=nav-node>
-            <h2 class=small><a href=/about/ >about</a></h2>
+            <h2 class=small>
+              <a href=/about/>about</a>
+            </h2>
             <li class=nav-node>
-              <h2 class=small><a href=/explore/ >explore</a></h2>
+              <h2 class=small>
+                <a href=/all/>explore</a>
+              </h2>
               <li class=nav-node>
-                <h2 class=small><a href=/io/ >io</a></h2></ul>
+                <h2 class=small>
+                  <a href=/io/>io</a>
+                </h2>
+        </ul>
       </nav>
     </header>
     <main class=nullog-body>
       <article class="post archlinuxmacbook">
         <header class=title>
-          <h2 class=lowercase>iSight in Arch<span class=mute> enabling the isight</span></h2></header>
-        <p>According the the Arch <a href=https://wiki.archlinux.org/index.php/MacBook#iSight title="modified on 12 May 2013, at 08:49">MacBook wiki page</a>, the MacBook’s iSight camera should just work out of the box since kernal 2.6.26. Well that maybe
-          the case on new hardware<sup id=fn1r-2013-05-26><a href=#fn1-2013-05-26>1</a></sup>, older hardware<sup id=fn2r-2013-05-26><a href=#fn2-2013-05-26>2</a></sup> doesn’t have the iSight camera just work. One must first do some work, like finding
-          the drivers <code>AppleUSBVideoSupport</code>. The driver can be found on any Mac OS X system, however it must come Mac OS X pre-10.6, so just just google it.
+          <h2 class=lowercase>iSight in Arch
+            <span class=mute> enabling the isight</span>
+          </h2>
+        </header>
+        <p>According the the Arch
+          <a href=https://wiki.archlinux.org/index.php/MacBook#iSight title="modified on 12 May 2013, at 08:49">MacBook wiki page</a>, the MacBook’s iSight camera should just work out of the box since kernal 2.6.26. Well that maybe the case on new hardware
+          <sup id=fn1r-2013-05-26>
+            <a href=#fn1-2013-05-26>1</a>
+          </sup>, older hardware
+          <sup id=fn2r-2013-05-26>
+            <a href=#fn2-2013-05-26>2</a>
+          </sup> doesn’t have the iSight camera just work. One must first do some work, like finding the drivers <code>AppleUSBVideoSupport</code>. The driver can be found on any Mac OS X system, however it must come Mac OS X pre-10.6, so just just google it.
           <p>Install <code>isight-firmware-tools</code> from the AUR (you will need <code>base-devel</code>):<pre><code>bash &lt;(curl aur.sh) -si isight-firmware-tools
 </code></pre>
             <p>Once the drive is found and tools are installed the easy part is putting it all together:<pre><code># ift-extract --apple-driver AppleUSBVideoSupport
 # sudo reboot
 </code></pre>
-              <p>The driver will be ‘extracted’ to <code>/lib/firmware/isight.fw</code> loaded at reboot[<sup id=fn3r-2013-05-26><a href=#fn3-2013-05-26>3</a></sup> with an udev rule.
+              <p>The driver will be ‘extracted’ to <code>/lib/firmware/isight.fw</code> loaded at reboot[
+                <sup id=fn3r-2013-05-26>
+                  <a href=#fn3-2013-05-26>3</a>
+                </sup> with an udev rule.
                 <div class=footnotes>
                   <ol>
                     <li id=fn1-2013-05-26>
-                      <p>MacBookPro (6,2), MacBookPro (9,2) <a href=#fn1r-2013-05-26>&#x21A9;&#xFE0E;</a>
+                      <p>MacBookPro (6,2), MacBookPro (9,2)
+                        <a href=#fn1r-2013-05-26>&#x21A9;&#xFE0E;</a>
                         <li id=fn2-2013-05-26>
-                          <p>MacBook (2,1), MacBook (4,1) <a href=#fn2r-2013-05-26>&#x21A9;&#xFE0E;</a>
+                          <p>MacBook (2,1), MacBook (4,1)
+                            <a href=#fn2r-2013-05-26>&#x21A9;&#xFE0E;</a>
                             <li id=fn3-2013-05-26>
-                              <p>/usr/lib/udev/ift-load –firmware /lib/firmware/isight.fw <a href=#fn3r-2013-05-26>&#x21A9;&#xFE0E;</a></ol>
+                              <p>/usr/lib/udev/ift-load –firmware /lib/firmware/isight.fw
+                                <a href=#fn3r-2013-05-26>&#x21A9;&#xFE0E;</a>
+                  </ol>
                 </div>
       </article>
     </main>
     <footer>
       <div class="small center">
-        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...<br><em>Copyright &copy; 2012 &mdash; 2016; <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a></em></div>
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...
+          <br>
+          <em>Copyright &copy; 2012 &mdash; 2017;
+            <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a>
+          </em>
+      </div>
     </footer>

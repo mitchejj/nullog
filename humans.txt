@@ -6,12 +6,14 @@
       Location: Michigan
 
 /* SITE */
-      Generated: 2016-04-29T23:57:33.735Z
+      Name: nullog
+      Domain: nullog.net
+      Generated: 2017-04-17T17:07:49.276Z
       Language: English
       Doctype: HTML5
       Tools: Gulp, Metalsmith & postcss
-      IDE: Atom & Visiual Studio Code
+      Editor: Atom
 
 /* NODE */
-      Version: 6.0.0
+      Version: 7.9.0
       Platform: x64-linux
