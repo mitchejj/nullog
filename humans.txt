@@ -8,7 +8,7 @@
 /* SITE */
       Name: nullog
       Domain: nullog.net
-      Generated: 2017-05-30T01:03:30.623Z
+      Generated: 2017-05-30T01:18:30.459Z
       Language: English
       Doctype: HTML5
       Tools: Gulp, Metalsmith & postcss

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=en-US>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+  <meta content=nullog property=og:site_name>
+  <meta content=2016-04-29T23:48:12.000Z property=og:updated_time>
+  <meta content=en_US property=og:locale>
+  <meta content=article property=og:type>
+  <meta content="Giving Back" property=og:title>
+  <meta content=stackoverflow property=og:description>
+  <meta content=https://nullog.net/2012/10/4/giving-back/ property=og:url>
+  <meta content="Jason Mitchell" property=article:author>
+  <meta content=herokujekyll property=article:tag>
+  <meta content=2012-10-04T00:00:00.000Z property=article:published_time>
+  <meta content=2016-04-29T23:48:12.000Z property=article:modified_time>
+  <meta content=summary name=twitter:card>
+  <meta content=@_nullog name=twitter:site>
+  <meta content=@mitchejj name=twitter:creator>
+  <meta content="Giving Back" name=twitter:title>
+  <meta content=stackoverflow name=twitter:description>
+  <link href=//humans.txt rel=author type=text/plain>
+  <title>Giving Back | nullog</title>
+  <link href=https://nullog.net/2012/10/4/giving-back/ rel=canonical>
+  <link href=/nullog.css rel=stylesheet>
+  <body class=nullog>
+    <header class="center site-header">
+      <h1 class="center lowercase site-title">
+        <a href=/>nullog</a>
+      </h1>
+      <nav class="lowercase site-nav">
+        <ul>
+          <li class=nav-node>
+            <h2 class=small>
+              <a href=/about/>about</a>
+            </h2>
+            <li class=nav-node>
+              <h2 class=small>
+                <a href=/all/>explore</a>
+              </h2>
+              <li class=nav-node>
+                <h2 class=small>
+                  <a href=/io/>io</a>
+                </h2>
+        </ul>
+      </nav>
+    </header>
+    <main class=nullog-body>
+      <article class="post herokujekyll">
+        <header class=title>
+          <h2 class=lowercase>Giving Back
+            <span class=mute> stackoverflow</span>
+          </h2>
+        </header>
+        <p>I the course of building and deploying this site one particular site has been truly helpful, Stack Overflow. Today I was finally able to give back and answer a fairly simple question that had me perplex when I first encountered it,
+          <a href=http://stackoverflow.com/questions/12241403/jekyll-on-heroku-listing-additional-internal-posts-i-havent-created>Jekyll on Heroku listing additional (internal?) posts I haven’t created</a>.
+          <p>
+            <strong>The probelm:</strong> Jekyll on heroku publishes mysterious pages, and they all relate to your project someway, somehow.
+            <p>
+              <strong>The solution:</strong> Let’s call the directory where Jekyll is installed &amp; running from the root /. Heroku installs the applications gems in <code>/vendor</code>. When Jekyll builds the site it scans all files and folder in the root
+              file directory, including <code>/vendor</code>. Fix is to simple edit <code>_config.yml</code> and put <code>vendor</code> in the exclude array.</article>
+    </main>
+    <footer>
+      <div class="small center">
+        <p>So this is it. I mean, it&#x27;s not much, but it&#x27;s, you know...
+          <br>
+          <em>Copyright &copy; 2012 &mdash; 2017;
+            <a href=http://twitter.com/mitchejj title=@mitchejj>Jason Mitchell</a>
+          </em>
+      </div>
+    </footer>
